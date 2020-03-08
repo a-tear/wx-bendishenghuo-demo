@@ -1,0 +1,17 @@
+<include src="/search/search-bar.wxml" />
+<view class="content">
+    <navigator url="/pages/detail/detail?cat={{item.id}}" class="content-item" wx:for="{{shopList}}" wx:key="id">
+        <view class="img">
+            <image mode="aspectFil" src="{{item.images[0]}}"></image>
+        </view>
+        <view class="info">
+            <view class="title">{{item.name}}</view>
+            <view class="tel">电话:{{item.phone}}</view>
+            <view class="address">地址:{{item.address}}</view>
+            <view class="shoppingTime">营业时间：{{item.businessHours}}</view>
+        </view>
+        <view class="score">{{item.score}}</view>
+    </navigator>
+    <view wx:if="{{hasMore}}" class="loadmore loading">正在加载...</view>
+    <view wx:else class="loadmore">没有更多内容了</view>
+</view>

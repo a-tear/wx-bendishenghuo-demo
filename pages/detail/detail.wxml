@@ -1,0 +1,37 @@
+<view class="detail">
+    <view class="content">
+        <swiper>
+            <swiper-item class="swiper-item" wx:for="{{shopsList.images}}" wx:key="id">
+                <image src="{{item}}" mode="aspectFill"   bindtap="previewHandle" data-src="{{item}}"></image>
+            </swiper-item>
+        </swiper>
+        <view class="shopsInfo">
+            <text class="title">{{shopsList.name}}</text>
+            <text class="tel">电话:{{shopsList.phone}}</text>
+            <text class="address">地址:{{shopsList.address}}</text>
+            <text class="shoppingTime">营业时间:{{shopsList.businessHours}}</text>
+        </view>
+    </view>
+    <view class="comments">
+        <view class="comments-item" wx:for="{{shopsList.comments}}">
+            <view class="score">{{item.rating}}</view>
+            <view class="head">
+                <text class="name">{{item.name}}</text>
+                <text class="date">{{item.date}}</text>
+            </view>
+            <view class="content">
+                <text class="text">{{item.content}}</text>
+            </view>
+            <view class="imgs">
+                <image wx:for="{{item.images}}" src="{{utils.size(item)}}"></image>
+            </view>
+        </view>
+    </view>
+    <wxs module="utils">
+        module.exports = {
+            size: function (input) {
+            return input.replace('w.h', '100.100')
+            }   
+        }
+    </wxs>
+</view>

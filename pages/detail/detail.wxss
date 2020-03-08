@@ -1,0 +1,67 @@
+page {
+    background-color: #EFEFF4;
+}
+
+swiper {
+    height: 580rpx;
+}
+
+.swiper-item image {
+    width: 100%;
+    height: 100%;
+}
+
+.content .shopsInfo {
+    display: flex;
+    padding: 20rpx 30rpx;
+    flex-direction: column;
+    color: #567;
+    font-size: 24rpx;
+    background-color: #fff;
+}
+
+.content .shopsInfo .title {
+    color: #234;
+    font-size: 40rpx;
+}
+
+.comments-item {
+    padding: 20rpx;
+    margin-top: 20rpx;
+    border-bottom: 1rpx solid #eee;
+    background-color: #fff;
+}
+
+.comments-item .score {
+    color: #ee523d;
+    text-align: right;
+}
+
+.comments-item .head {
+    display: flex;
+    font-size: 36rpx;
+    color: #234;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comments-item .head .date {
+    font-size: 20rpx;
+    color: #567;
+}
+
+.comments-item .content {
+    margin: 20rpx 0;
+    font-size: 26rpx;
+    color: #234;
+}
+
+.comments-item .imgs {
+    display: flex;
+}
+
+.comments-item .imgs image {
+    width: 110rpx;
+    height: 110rpx;
+    margin: 0 10rpx;
+}
